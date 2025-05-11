@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BirthdayTApp</string>
+    <string name="TextView_name">showText</string>
+    <string name="Button_name">btn1</string>
+    <string name="EditView_name">inputText</string>
+    <string name="btn_lable">Button</string>
+    <string name="Edtext">请输入</string>
+    <string name="Tvtext">hello</string>
+    <string name="lable_add1">+1point</string>
+    <string name="lable_add2">+2point</string>
+    <string name="lable_add3">+3point</string>
+    <string name="btn_reset_label">Reset</string>
+
+<style name="AppThone" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <item name="colorButtonNormal">@android:color/holo_orange_light</item>
+</style>
+
+
+</resources>
