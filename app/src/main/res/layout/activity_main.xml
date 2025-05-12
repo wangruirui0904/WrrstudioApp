@@ -34,4 +34,11 @@
         android:layout_weight="1"
         android:text="@string/btn_lable" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="wrr" />
+
 </LinearLayout>
