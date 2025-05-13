@@ -1,6 +1,7 @@
 package com.example.birthdaytapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -55,7 +56,17 @@ public class Ratectivity extends AppCompatActivity {
 
     }
     public void clickOpen(View btn){
-        Intent main = new Intent(this,MainActivity.class);
-        startActivity(main);
+        //打开新的窗口
+        //Intent main = new Intent(this,MainActivity.class);
+        //startActivity(main);
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:87092173"));
+        startActivity(intent);
+    }
+    public void click5(View btn)
+    {
+//        Intent intentPhone = new Intent(Intent.ACTION_CALL, Uri.parse("tel:87092173"));
+//        startActivity(intentPhone);
+        Intent jdintent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.jd.com"));
+        startActivity(jdintent);
     }
 }

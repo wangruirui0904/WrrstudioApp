@@ -45,8 +45,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_won"
         android:text="@string/btn_won_lable"
-
-        android:onClick="click"/>
+        android:onClick="click5"/>
 
 
 
