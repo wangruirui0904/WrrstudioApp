@@ -60,6 +60,9 @@
     <string name="tip_weight">Input your weight(KG)</string>
     <string name="tip_height">Input your height(cm)</string>
     <string name="tip_btn">计算</string>
-
-
+    <string name="rmb_show">Hello</string>
+    <string name="rmb_inp_tip">Input RMB</string>
+    <string name="btn_dollar_lable">dollar</string>
+    <string name="btn_euro_lable">euro</string>
+    <string name="btn_won_lable">won</string>
 </resources>
