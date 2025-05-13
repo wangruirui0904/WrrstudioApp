@@ -64,9 +64,9 @@ public class Ratectivity extends AppCompatActivity {
     }
     public void click5(View btn)
     {
-//        Intent intentPhone = new Intent(Intent.ACTION_CALL, Uri.parse("tel:87092173"));
-//        startActivity(intentPhone);
-        Intent jdintent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.jd.com"));
-        startActivity(jdintent);
+        Intent intentPhone = new Intent(Intent.ACTION_CALL, Uri.parse("tel:87092173"));
+        startActivity(intentPhone);
+        //Intent jdintent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.jd.com"));
+        //startActivity(jdintent);
     }
 }
