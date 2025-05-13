@@ -15,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class Ratectivity extends AppCompatActivity {
 
     TextView show;
+    private float dollarRate=0.1f;
+    private float euroRate=0.05f;
+    private float wonRate=500f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +34,15 @@ public class Ratectivity extends AppCompatActivity {
             float result = 0.0f;
             //计算
             if (btn.getId() == R.id.btn_dollar) {
-                result = rmb * 0.1f;
+
+                result = rmb * dollarRate;
             } else if (btn.getId() == R.id.btn_euro) {
-                result = rmb * 0.05f;
+
+                result = rmb * euroRate;
             } else if (btn.getId() == R.id.btn_won) {
 
-                result = rmb * 500f;
+
+                result = rmb * wonRate;
             }
 
             //输出
