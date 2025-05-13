@@ -1,5 +1,6 @@
 package com.example.birthdaytapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -52,5 +53,9 @@ public class Ratectivity extends AppCompatActivity {
             Toast.makeText(this, "请输入正确数据", Toast.LENGTH_LONG).show();
         }
 
+    }
+    public void clickOpen(View btn){
+        Intent main = new Intent(this,MainActivity.class);
+        startActivity(main);
     }
 }

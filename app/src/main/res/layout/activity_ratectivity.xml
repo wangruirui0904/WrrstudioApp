@@ -39,7 +39,7 @@
         android:id="@+id/btn_euro"
         android:text="@string/btn_euro_lable"
 
-        android:onClick="click"/>
+        android:onClick="clickOpen"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
