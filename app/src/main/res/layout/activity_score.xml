@@ -1,71 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeconfActivity">
+    tools:context=".ScoreActivity">
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
-        android:onClick="btnReset"
+        android:layout_marginBottom="80dp"
+        android:onClick="reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="@string/btn_reset_label" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:id="@+id/teamName"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="24dp"
-            android:textSize="25sp"
-            android:text="TeamA"/>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/score"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginEnd="8dp"
+           android:orientation="vertical">
+    <TextView
+        android:id="@+id/teamName1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="TeamA"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="65sp" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/design_default_color_secondary"
+        android:onClick="clicka"
+        android:text="@string/lable_add3" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="clicka"
+        android:text="@string/lable_add2" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clicka"
+        android:text="@string/lable_add1" />
+</LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:background="@color/cardview_dark_background"/>
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/teamName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
             android:gravity="center"
-            android:textSize="65sp"
+            android:text="TeamA"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/score2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="0" />
+            android:gravity="center"
+            android:text="0"
+            android:textSize="65sp" />
 
         <Button
-            android:id="@+id/btn_3"
+            android:id="@+id/btn_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@color/design_default_color_secondary"
-            android:onClick="btnAdd3"
+            android:onClick="clickb"
             android:text="@string/lable_add3" />
 
         <Button
-            android:id="@+id/btn_2"
+            android:id="@+id/btn_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:onClick="btnAdd2"
+            android:onClick="clickb"
             android:text="@string/lable_add2" />
 
         <Button
-            android:id="@+id/btn_1"
+            android:id="@+id/btn_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="btnAdd1"
+            android:onClick="clickb"
             android:text="@string/lable_add1" />
-
     </LinearLayout>
-</RelativeLayout>
+          </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
