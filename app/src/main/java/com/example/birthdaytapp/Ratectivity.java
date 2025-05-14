@@ -1,21 +1,18 @@
 package com.example.birthdaytapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Ratectivity extends AppCompatActivity {
 
+    private static final String TAG ="Rate";
     TextView show;
     private float dollarRate=0.1f;
     private float euroRate=0.05f;
@@ -57,16 +54,20 @@ public class Ratectivity extends AppCompatActivity {
     }
     public void clickOpen(View btn){
         //打开新的窗口
-        //Intent main = new Intent(this,MainActivity.class);
-        //startActivity(main);
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:87092173"));
-        startActivity(intent);
+        Intent config = new Intent(this,ConfigActivity.class);
+        //传递参数
+        config.putExtra("dollar_rate_key",dollarRate);
+        config.putExtra("euro_rate_key",euroRate);
+        config.putExtra("won_rate_key",wonRate);
+
+        Log.i(TAG, "clickOpen: dollarRate="+dollarRate);
+        Log.i(TAG, "clickOpen: euroRate="+euroRate);
+        Log.i(TAG, "clickOpen: wonRate="+wonRate);
+
+
+
+        startActivity(config);
+
     }
-    public void click5(View btn)
-    {
-        Intent intentPhone = new Intent(Intent.ACTION_CALL, Uri.parse("tel:87092173"));
-        startActivity(intentPhone);
-        //Intent jdintent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.jd.com"));
-        //startActivity(jdintent);
-    }
+
 }

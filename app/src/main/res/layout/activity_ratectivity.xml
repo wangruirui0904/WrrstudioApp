@@ -38,14 +38,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_euro"
         android:text="@string/btn_euro_lable"
-
-        android:onClick="clickOpen"/>
+        android:onClick="click"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_won"
         android:text="@string/btn_won_lable"
-        android:onClick="click5"/>
+        android:onClick="click"/>
+
+    <Button
+        android:id="@+id/btn_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickOpen"
+        android:text="@string/btn_config_label"
+        android:layout_marginTop="16dp"/>
 
 
 

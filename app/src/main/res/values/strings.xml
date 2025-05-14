@@ -65,4 +65,5 @@
     <string name="btn_dollar_lable">dollar</string>
     <string name="btn_euro_lable">euro</string>
     <string name="btn_won_lable">won</string>
+    <string name="btn_config_label">config</string>
 </resources>
