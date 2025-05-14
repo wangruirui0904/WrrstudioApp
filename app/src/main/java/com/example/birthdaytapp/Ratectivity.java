@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Ratectivity extends AppCompatActivity {
@@ -64,10 +65,22 @@ public class Ratectivity extends AppCompatActivity {
         Log.i(TAG, "clickOpen: euroRate="+euroRate);
         Log.i(TAG, "clickOpen: wonRate="+wonRate);
 
+        //startActivity(config);
 
-
-        startActivity(config);
-
+        startActivityForResult(config,3);
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        if(requestCode==3 && resultCode==6){
+            Bundle bdl = data.getExtras();
+            dollarRate = bdl.getFloat("key_dollar2");
+            euroRate = bdl.getFloat("key_euro2");
+            wonRate = bdl.getFloat("key_won2");
+            Log.i(TAG, "onActivityResult= "+dollarRate);
+        }
+        super.onActivityResult(requestCode,resultCode,data);
+    }
+
 
 }
