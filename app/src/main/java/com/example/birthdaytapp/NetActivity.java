@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -25,11 +27,13 @@ public class NetActivity extends AppCompatActivity implements Runnable {
 
     private static final String TAG = "Net";
     Handler handler;
+    TextView show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net);
+        show = findViewById(R.id.net_show);
 
         handler = new Handler(Looper.myLooper()) {
             @Override
@@ -38,6 +42,7 @@ public class NetActivity extends AppCompatActivity implements Runnable {
                 if (msg.what == 5) {
                     String str = (String) msg.obj;
                     Log.i(TAG, "handleMessage: str=" + str);
+                    show.setText(str);
 
                 }
                 super.handleMessage(msg);
@@ -50,18 +55,26 @@ public class NetActivity extends AppCompatActivity implements Runnable {
         t.start();
     }
 
+    public void onClick(View btn){
+        Log.i(TAG, "onClic");
+        Thread t = new Thread(this);
+        t.start();
+    }
+
+
     @Override
     public void run() {
         Log.i(TAG, "run: 子线程（）.....");
 
         //获网络数据
         URL url = null;
+        String html="";
         try {
             url = new URL("https://www.swufe.edu.cn/info/1067/37271.htm");
             HttpURLConnection http = (HttpURLConnection) url.openConnection();
             InputStream in = http.getInputStream();
 
-            String html = inputStream2String(in);
+            html = inputStream2String(in);
             Log.i(TAG, "run: html=" + html);
 
         } catch (MalformedURLException e) {
@@ -71,7 +84,7 @@ public class NetActivity extends AppCompatActivity implements Runnable {
         }
 
         //发送消息
-        Message msg = handler.obtainMessage(5, "Hello from thread");
+        Message msg = handler.obtainMessage(5,html );
         handler.sendMessage(msg);
     }
 
