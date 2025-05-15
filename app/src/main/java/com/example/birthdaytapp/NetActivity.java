@@ -15,6 +15,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.jsoup.Jsoup;
+import org.jsoup.select.Elements;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -76,6 +81,10 @@ public class NetActivity extends AppCompatActivity implements Runnable {
 
             html = inputStream2String(in);
             Log.i(TAG, "run: html=" + html);
+
+
+
+
 
         } catch (MalformedURLException e) {
             e.printStackTrace();

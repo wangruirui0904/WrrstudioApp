@@ -16,22 +16,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Ratectivity extends AppCompatActivity {
 
-    private static final String TAG ="Rate";
+    private static final String TAG = "Rate";
     TextView show;
-    private float dollarRate=0.1f;
-    private float euroRate=0.05f;
-    private float wonRate=500f;
+    private float dollarRate = 0.1f;
+    private float euroRate = 0.05f;
+    private float wonRate = 500f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ratectivity);
-        show=findViewById(R.id.rmb_show);
+        show = findViewById(R.id.rmb_show);
     }
-    public void click(View btn){
+
+    public void click(View btn) {
         //获取输入数据
-        EditText input =findViewById(R.id.rmb);
-        String inpStr=input.getText().toString();
+        EditText input = findViewById(R.id.rmb);
+        String inpStr = input.getText().toString();
         try {
             float rmb = Float.parseFloat(inpStr);
             float result = 0.0f;
@@ -50,57 +51,59 @@ public class Ratectivity extends AppCompatActivity {
 
             //输出
             show.setText(String.valueOf(result));
-        }catch(NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             show.setText("请输入正确数据");
             Toast.makeText(this, "请输入正确数据", Toast.LENGTH_LONG).show();
         }
 
     }
-    public void clickOpen(View btn){
+
+    public void clickOpen(View btn) {
         openConfigActivity();
     }
 
     private void openConfigActivity() {
         //打开新的窗口
-        Intent config = new Intent(this,ConfigActivity.class);
+        Intent config = new Intent(this, ConfigActivity.class);
         //传递参数
-        config.putExtra("dollar_rate_key",dollarRate);
-        config.putExtra("euro_rate_key",euroRate);
-        config.putExtra("won_rate_key",wonRate);
+        config.putExtra("dollar_rate_key", dollarRate);
+        config.putExtra("euro_rate_key", euroRate);
+        config.putExtra("won_rate_key", wonRate);
 
-        Log.i(TAG, "clickOpen: dollarRate="+dollarRate);
-        Log.i(TAG, "clickOpen: euroRate="+euroRate);
-        Log.i(TAG, "clickOpen: wonRate="+wonRate);
+        Log.i(TAG, "clickOpen: dollarRate=" + dollarRate);
+        Log.i(TAG, "clickOpen: euroRate=" + euroRate);
+        Log.i(TAG, "clickOpen: wonRate=" + wonRate);
 
         //startActivity(config);
 
-        startActivityForResult(config,3);
+        startActivityForResult(config, 3);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-    {
-        if(requestCode==3 && resultCode==6){
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == 3 && resultCode == 6) {
             Bundle bdl = data.getExtras();
             dollarRate = bdl.getFloat("key_dollar2");
             euroRate = bdl.getFloat("key_euro2");
             wonRate = bdl.getFloat("key_won2");
-            Log.i(TAG, "onActivityResult= "+dollarRate);
+            Log.i(TAG, "onActivityResult= " + dollarRate);
         }
-        super.onActivityResult(requestCode,resultCode,data);
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.mymenu,menu);
+        getMenuInflater().inflate(R.menu.mymenu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.menu_set) {
+        if (item.getItemId() == R.id.menu_set) {
             openConfigActivity();
+
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return false;
     }
 }
