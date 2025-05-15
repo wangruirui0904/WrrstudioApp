@@ -70,7 +70,7 @@ public class NetActivity extends AppCompatActivity implements Runnable {
         URL url = null;
         String html="";
         try {
-            url = new URL("https://www.swufe.edu.cn/info/1067/37271.htm");
+            url = new URL("https://www.boc.cn/sourcedb/whpj/");
             HttpURLConnection http = (HttpURLConnection) url.openConnection();
             InputStream in = http.getInputStream();
 
