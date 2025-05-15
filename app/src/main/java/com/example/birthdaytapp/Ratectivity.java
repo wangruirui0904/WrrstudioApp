@@ -3,11 +3,14 @@ package com.example.birthdaytapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,6 +57,10 @@ public class Ratectivity extends AppCompatActivity {
 
     }
     public void clickOpen(View btn){
+        openConfigActivity();
+    }
+
+    private void openConfigActivity() {
         //打开新的窗口
         Intent config = new Intent(this,ConfigActivity.class);
         //传递参数
@@ -69,6 +76,7 @@ public class Ratectivity extends AppCompatActivity {
 
         startActivityForResult(config,3);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
     {
@@ -82,5 +90,17 @@ public class Ratectivity extends AppCompatActivity {
         super.onActivityResult(requestCode,resultCode,data);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.menu_set) {
+            openConfigActivity();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
