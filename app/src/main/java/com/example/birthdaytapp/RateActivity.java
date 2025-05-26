@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Ratectivity extends AppCompatActivity {
+public class RateActivity extends AppCompatActivity {
 
     private static final String TAG = "Rate";
     TextView show;
@@ -25,7 +25,7 @@ public class Ratectivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ratectivity);
+        setContentView(R.layout.activity_rate);
         show = findViewById(R.id.rmb_show);
     }
 
