@@ -72,4 +72,14 @@
     <string name="btn_euro_label">euro</string>
     <string name="btn_won_label">won</string>
     <string name="label_hello">hello</string>
+    <string name="final_text_welcome1">欢迎来到喵喵健康</string>
+    <string name="final_text_welcome2">我是你的健康助手小u</string>
+    <string name="final_btn_1">点击进入</string>
+    <string name="final_text_page1">首页</string>
+    <string name="final_text_page1_btn2">BMI喵星人</string>
+    <string name="final_text_page1_btn3">喵体日记</string>
+    <string name="final_text_page1_btn4">喵力全开</string>
+    <string name="final_text_page1_btn5">喵喵健康</string>
+
+
 </resources>

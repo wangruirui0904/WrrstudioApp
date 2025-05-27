@@ -14,15 +14,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BirthdayTApp"
         tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".Final_2Activity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
-            android:name=".RateActivity"
-            android:exported="true">
+            android:name=".Final_1Activity"
+            android:exported="true">  <!-- 必须为 true -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Final_2Activity"
+            android:exported="false" />
+        <!--        <activity-->
+<!--            android:name=".RateActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity> -->
         <!-- <activity -->
         <!-- android:name=".NetActivity" -->
         <!-- android:exported="true"> -->
@@ -50,10 +70,10 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity
-            android:name=".ScoreActivity"
-            android:exported="true"> <!-- 如果允许其他应用启动此 Activity，则需设置为 true -->
-        </activity>
+<!--        <activity-->
+<!--            android:name=".ScoreActivity"-->
+<!--            android:exported="true"> &lt;!&ndash; 如果允许其他应用启动此 Activity，则需设置为 true &ndash;&gt;-->
+<!--        </activity>-->
     </application>
 
 </manifest>

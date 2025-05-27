@@ -5,19 +5,19 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="NetActivity">
+      <SelectionState runConfigName="Final_1Activity">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="NetActivity (1)">
+      <SelectionState runConfigName="Final_1Activity (1)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="NetActivity (2)">
+      <SelectionState runConfigName="Final_1Activity (2)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Ratectivity (1)">
+      <SelectionState runConfigName="Final_1Activity (3)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ScoreActivity">
+      <SelectionState runConfigName="Final_1Activity (4)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
