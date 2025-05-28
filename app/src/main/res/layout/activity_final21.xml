@@ -21,7 +21,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/final_text_page1_btn2_E1"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/textView2"
@@ -37,7 +37,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/final_text_page1_btn2_E2"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <RadioGroup
         android:id="@+id/radioGroupGender"
@@ -61,7 +61,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
