@@ -65,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
         android:text="@string/final_text_page1_btn2_B1" />
 
     <TextView
