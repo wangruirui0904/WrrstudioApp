@@ -56,11 +56,11 @@ public class NetActivity extends AppCompatActivity implements Runnable {
         };
 
 
-        Thread t = new Thread(this);
-        t.start();
+//        Thread t = new Thread(this);
+//        t.start();
     }
 
-    public void onClick(View btn){
+    public void onClick(View btn) {
         Log.i(TAG, "onClic");
         Thread t = new Thread(this);
         t.start();
@@ -73,43 +73,58 @@ public class NetActivity extends AppCompatActivity implements Runnable {
 
         //获网络数据
         URL url = null;
-        String html="";
-        try {
-            url = new URL("https://www.boc.cn/sourcedb/whpj/");
-            HttpURLConnection http = (HttpURLConnection) url.openConnection();
-            InputStream in = http.getInputStream();
-
-            html = inputStream2String(in);
-            Log.i(TAG, "run: html=" + html);
-
-
-
-
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //发送消息
-        Message msg = handler.obtainMessage(5,html );
-        handler.sendMessage(msg);
-    }
-
-    private String inputStream2String(InputStream inputStream) throws IOException {
-        final int bufferSize = 1024;
-        final char[] buffer = new char[bufferSize];
-        final StringBuilder out = new StringBuilder();
-        Reader in = new InputStreamReader(inputStream, "utf-8");
-        while (true) {
-            int rsz = in.read(buffer, 0, buffer.length);
-            if (rsz < 0)
-                break;
-            out.append(buffer, 0, rsz);
-        }
-        return out.toString();
+        String html = "";
+        //       try {
+//            url = new URL("https://www.boc.cn/sourcedb/whpj/");
+//            HttpURLConnection http = (HttpURLConnection) url.openConnection();
+//            InputStream in = http.getInputStream();
+//
+//            html = inputStream2String(in);
+//            Log.i(TAG, "run: html=" + html);
+//
+//            Document doc = Jsoup.connect("https://www.boc.cn/sourcedb/whpj/").get();
+//            Element table = doc.getElementsByTagName("table").first();
+//            Elements rows = table.getElementsByTagName("tr");
+//            rows.remove(0);
+//            for (Element row : rows) {
+//                Elements tds = row.getElementsByTagName("td");
+//                Element td1 = tds.first();
+//                Element td2 = tds.get(4);
+//                log.i(TAG, "run td1=" + td1.text() + "->" + td2.text());
+//                html += (td1.text() + "=>" + td2.text() + "\n");
+//            }
+//
+//            Element td = doc.select("body>main>div.Lt.dh>div.hlb>div.hlb_lt>table>tbody>tr:nth-child(7)")
 
 
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        }
+        //  }
+//    Message msg = handler.obtainMessage(5,html );
+//         handler.sendMessage(msg);
+//    }
+
+
+//
+//    private String inputStream2String(InputStream inputStream) throws IOException {
+//        final int bufferSize = 1024;
+//        final char[] buffer = new char[bufferSize];
+//        final StringBuilder out = new StringBuilder();
+//        Reader in = new InputStreamReader(inputStream, "utf-8");
+//        while (true) {
+//            int rsz = in.read(buffer, 0, buffer.length);
+//            if (rsz < 0)
+//                break;
+//            out.append(buffer, 0, rsz);
+//        }
+//        return out.toString();
+//
+//
+//    }
     }
 }
+
